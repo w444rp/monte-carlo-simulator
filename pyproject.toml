@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "monte-carlo-simulation"
+version = "1.0.0"
+description = "Monte Carlo simulation using Geometric Brownian Motion"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "python-dateutil",
+    "rich"
+]
+
+[project.scripts]
+mcs = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
